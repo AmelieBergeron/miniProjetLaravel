@@ -1,0 +1,62 @@
+form {
+    border: solid black 0.5px;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 70%;
+    margin: auto;
+}
+
+.to_grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+label, form p {
+    margin: 10px 5px;
+}
+
+.to_grid input, .to_grid select {
+    max-height: 30px;
+}
+
+.to_grid select {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#type_message label {
+    margin-right: 40px;
+}
+
+.bouton {
+    border: solid black  0.5px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor:pointer;
+    text-align: center;
+}
+
+.bouton:hover {
+    background-color: lightgrey;
+}
+
+textarea {
+    width: 100%; height: 100%;
+    box-sizing: border-box;
+}
+
+.form_errors_div {
+    color: red;
+    margin: auto;
+    max-width: 70%;
+    margin: auto;
+}
+
+.form_errors_div p {
+    font-weight: bold;
+}
+
+.form_errors_div ul {
+    list-style-type: circle;
+    list-style-position: inside;
+}
