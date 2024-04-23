@@ -1,4 +1,4 @@
-form {
+#form_commentaire {
     border: solid black 0.5px;
     border-radius: 10px;
     padding: 15px;
@@ -8,15 +8,11 @@ form {
 
 .to_grid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 30% 70%;
 }
 
 label, form p {
     margin: 10px 5px;
-}
-
-.to_grid input, .to_grid select {
-    max-height: 30px;
 }
 
 .to_grid select {
@@ -29,20 +25,29 @@ label, form p {
 }
 
 .bouton {
-    border: solid black  0.5px;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 5px;
+    padding: 10px;
     cursor:pointer;
     text-align: center;
+    font-weight: bold;
+    background-color: rgb(59 130 246);
+    color: white;
 }
 
 .bouton:hover {
-    background-color: lightgrey;
+    background-color: rgb(29 78 216);
 }
 
 textarea {
     width: 100%; height: 100%;
     box-sizing: border-box;
+}
+
+#modif_prod input {
+    border: none;
+    background-color: rgb(209 213 219);
+    border-radius: 5px;
+    margin: 10px;
 }
 
 .form_errors_div {
@@ -59,4 +64,12 @@ textarea {
 .form_errors_div ul {
     list-style-type: circle;
     list-style-position: inside;
+}
+
+.form_errors_bg {
+    margin-top: 30px;
+    background-color: rgb(254 226 226);
+    padding:15px;
+    border: solid 0.5px red;
+    border-radius: 5px;
 }

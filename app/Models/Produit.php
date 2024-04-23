@@ -13,6 +13,13 @@ class Produit extends Model
     protected $primaryKey = 'id_produit';
     public $timestamps = false;
 
+    protected $fillable = [
+        'id_categorie',
+        'produit',
+        'description',
+        'prix'
+    ];
+
     public function categorie(): BelongsTo
     {
        // Il faut préciser la classe (le modèle) avec laquelle la relation s’établit.

@@ -9,7 +9,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 space-y-4">
                     <h1 class="text-center">Posez votre question ou laissez un commentaire</h1>
-                    <form method="post" action="{{ route('insertionCommentaire') }}">
+                    <form method="post" action="{{ route('insertionCommentaire') }} " id="form_commentaire">
                         @csrf
                         <div class="to_grid">
                             <label for="demandeur">Demandeur : </label>
@@ -46,16 +46,7 @@
 
 
                     </form>
-                    @if ($errors->any())
-                        <div class="form_errors_div">
-                            <p>Veuillez corriger l'erreur ou les erreurs suivante(s) :</p>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+
                 </div>
             </div>
         </div>

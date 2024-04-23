@@ -13,6 +13,12 @@ class Categorie extends Model
     protected $primaryKey = 'id_categorie';
     public $timestamps = false;
 
+    protected $fillable = [
+        'id_categorie',
+        'categorie',
+        'description'
+    ];
+
     public function produits(): HasMany
     {
       // Il faut préciser la classe (le modèle) avec laquelle la relation s’établit.

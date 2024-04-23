@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             // Vous pouvez ajouter d’autres "seeders" en les séparant par des virgules.
             CategorieSeeder::class,
             ProduitSeeder::class,
-
+            RoleSeeder::class,
         ]);
     }
 }
