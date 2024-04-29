@@ -22,7 +22,19 @@ class Produit extends Model
 
     public function categorie(): BelongsTo
     {
-       // Il faut préciser la classe (le modèle) avec laquelle la relation s’établit.
-       return $this->belongsTo(Categorie::class, 'id_categorie');
+        // Il faut préciser la classe (le modèle) avec laquelle la relation s’établit.
+        return $this->belongsTo(Categorie::class, 'id_categorie');
+    }
+
+    public function getProduitsLangue()
+    {
+        return $this->hasMany(Produits_Langues::class, 'id_produit');
+    }
+
+    public function traduction()
+    {
+        $langue = Langue::where('code', app()->getLocale())->first();
+        // $this->getProduitsLangue essaie de cherche une table produits__langue (deux _), mais existe pas
+        return $this->getProduitsLangue->where('id_langue', $langue->id_langue)->first();
     }
 }

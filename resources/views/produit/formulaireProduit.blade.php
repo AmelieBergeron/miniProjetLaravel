@@ -12,10 +12,10 @@
                         @csrf
                         <div class="to_grid">
                             <label for="demandeur">Produit </label>
-                            <input type="text" name="produit" value="{{ $produit->produit }}">
+                            <input type="text" name="produit" value="{{ $produit->traduction()->produit }}">
 
                             <label for="telephone">Description </label>
-                            <input type="tel" name="description" value="{{ $produit->description }}">
+                            <input type="tel" name="description" value="{{ $produit->traduction()->description }}">
 
                             <label for="sujet">Prix </label>
                             <input type="text" name="prix" value="{{ $produit->prix }}">

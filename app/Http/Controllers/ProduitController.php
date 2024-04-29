@@ -81,7 +81,7 @@ class ProduitController extends Controller
      * Display the specified resource.
      */
 
-    public function show(Request $request, int $id)
+    public function show(Request $request, string $lang, int $id)
     {
         if ($request->routeIs('produit')) {
             $produit = Produit::find($id);

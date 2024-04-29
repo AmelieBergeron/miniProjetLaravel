@@ -24,7 +24,7 @@
                             <label for="produit">Produit concerné :</label>
                             <select id="produit" name="produit">
                                 @foreach ($produits as $produit)
-                                    <option value="{{ $produit->id_produit }}">{{ $produit->produit }}</option>
+                                    <option value="{{ $produit->id_produit }}">{{ $produit->traduction()->produit }}</option>
                                 @endforeach
                             </select>
                         </div>

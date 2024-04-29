@@ -22,8 +22,11 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             // Vous pouvez ajouter d’autres "seeders" en les séparant par des virgules.
+            LangueSeeder::class,
             CategorieSeeder::class,
+            CategoriesLanguesSeeder::class,
             ProduitSeeder::class,
+            ProduitsLanguesSeeder::class,
             RoleSeeder::class,
         ]);
     }

@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('produits', function (Blueprint $table) {
             $table->engine = 'InnoDB'; // Pour pouvoir utiliser les clés étrangères et les transactions
             $table->bigIncrements('id_produit'); // Clé primaire automatiquement créée avec "bigIncrements()".
-            // "usigned()" nécessaire pour éventuellement pouvoir définir une clé étrangère sur cette colonne.
             $table->bigInteger('id_categorie')->unsigned();
-            $table->string('produit');
-            $table->string('description');
             $table->decimal('prix', 10, 2);
             $table->foreign('id_categorie')->references('id_categorie')->on('categories'); //Clé étrangère sur "id_categorie" de la table categories
+
+                # $table->string('produit');        // Géré par la table categories_langues
+                # $table->string('description');    // Géré par la table categories_langues
         });
     }
 

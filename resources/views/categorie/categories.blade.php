@@ -11,8 +11,8 @@
                 <div class="p-6 text-gray-900 space-y-4">
                     @foreach ($categories as $categorie)
                     <div>
-                    <p class="font-semibold text-lg">Catégorie - {{ $categorie->categorie }} </p>
-                    <p> <strong>Description : </strong> {{ $categorie->description }}</p>
+                    <p class="font-semibold text-lg">Catégorie - {{ $categorie->traduction()->categorie }} </p>
+                    <p> <strong>Description : </strong> {{ $categorie->traduction()->description }}</p>
                     <a class="font-normal text-base text-sky-700 underline" href="{{
                     route('produitsCategorie', ['id' => $categorie->id_categorie]) }}">Voir le(s) produit(s) de cette catégorie</a></p>
                     </div>

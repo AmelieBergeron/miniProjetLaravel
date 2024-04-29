@@ -11,9 +11,9 @@
                 <div class="p-6 text-gray-900 space-y-4">
                     @foreach ($produits as $produit)
                         <div class="flex flex-row items-center">
-                            <p class="font-semibold text-lg">{{ $produit->produit }} -
+                            <p class="font-semibold text-lg">{{ $produit->traduction()->produit }} -
                                 <a class="font-normal text-base text-sky-700 underline"
-                                    href="{{ route('produit', ['id' => $produit->id_produit]) }}">En savoir plus</a>
+                                    href="{{ route('produit', ['id' => $produit->id_produit]) }}">{{__('En savoir plus')}}</a>
                             </p>
 
                             <form method="get" action="{{ route('modificationProduit') }}">
